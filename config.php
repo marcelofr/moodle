@@ -4,21 +4,21 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 
-$CFG->dbtype    = 'pgsql';
+$CFG->dbtype    = getenv('DATABASE_TYPE');
 $CFG->dblibrary = 'native';
-$CFG->dbhost    = 'ec2-54-160-120-28.compute-1.amazonaws.com';
-$CFG->dbname    = 'd1uip49jgn9g1q';
-$CFG->dbuser    = 'blbklmibsqfwsh';
-$CFG->dbpass    = '44cdd552b076789e50a5a385d9ba664c3d6ae269c43d90ca3300a2e5dc92e580';
+$CFG->dbhost    = getenv('DATABASE_HOST');
+$CFG->dbname    = getenv('DATABASE_NAME');
+$CFG->dbuser    = getenv('DATABASE_USER');
+$CFG->dbpass    = getenv('DATABASE_PASSWORD');
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
-  'dbport' => 5432,
-  'dbsocket' => 0,
+  'dbport' => getenv('DATABASE_PORT'),
+  'dbsocket' => '',
 );
 
-$CFG->wwwroot   = 'https://marcelo-moodle.herokuapp.com';
-$CFG->dataroot  = '/tmp';
+$CFG->wwwroot   = getenv('WWWROOT');
+$CFG->dataroot  = getenv('DATAROOT');
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
