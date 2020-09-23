@@ -4,7 +4,7 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 
-$CFG->dbtype    = getenv('pgsql');
+$CFG->dbtype    = 'pgsql';
 $CFG->dblibrary = 'native';
 $CFG->dbhost    = getenv('DATABASE_HOST');
 $CFG->dbname    = getenv('DATABASE_NAME');
