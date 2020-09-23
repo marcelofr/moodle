@@ -13,8 +13,8 @@ $CFG->dbpass    = '44cdd552b076789e50a5a385d9ba664c3d6ae269c43d90ca3300a2e5dc92e
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
-  'dbport' => '5432',
-  'dbsocket' => '',
+  'dbport' => 5432,
+  'dbsocket' => 0,
 );
 
 $CFG->wwwroot   = 'https://marcelo-moodle.herokuapp.com';
